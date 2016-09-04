@@ -1,1 +1,1 @@
-# Data_Structures_and_Algorithm_Analysis_in_C
+本项目包含一些对《数据结构与算法分析：C语言描述的》课后习题和知识点的整理。
