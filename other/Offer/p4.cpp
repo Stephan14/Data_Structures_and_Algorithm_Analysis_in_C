@@ -45,6 +45,8 @@ void repalceBlank( char strings[], int length )
 
 int main()
 {
-	
+    char str[10] = "a b";
+    repalceBlank( str, 10 ); 
+    cout<< str <<endl;   
 	return 0;
 }
