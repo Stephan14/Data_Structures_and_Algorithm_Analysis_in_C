@@ -4,7 +4,8 @@ using namespace std;
 
 
 void repalceBlank( char strings[], int length )
-{
+{   
+    //判断边界条件
 	if( strings == NULL || length < 0 )
 		return;
 		
