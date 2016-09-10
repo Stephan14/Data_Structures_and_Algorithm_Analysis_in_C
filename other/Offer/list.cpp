@@ -33,9 +33,9 @@ void addToTail( struct Node ** listHead, int value )
 void removeNode( struct Node **listHead, int value )
 {
     if( listHead == NULL || *listHead == NULL )
-        return NULL;
+        return;
 
-    struct Node toBeDeleted = NULL;
+    struct Node *toBeDeleted = NULL;
     //删除的节点为头结点
     if( ( *listHead )->value == value )
     {
@@ -60,11 +60,30 @@ void removeNode( struct Node **listHead, int value )
             delete toBeDeleted;
             toBeDeleted = NULL;
         }
+    }
+}
 
+void printList( struct Node *list )
+{
+    while( list != NULL )
+    {
+        cout << list->value << "  " << endl;
+        list = list->next;
     }
 }
 int main()
 {
+    struct Node *head = NULL;
+    addToTail( &head, 3 );
+    addToTail( &head, 23 );
+    addToTail( &head, 1 );
+    addToTail( &head, 8 );
 
+    printList( head );
+
+    removeNode( &head, 3 );
+    removeNode( &head, 23 );
+    removeNode( &head, 1 );
+    removeNode( &head, 8 );
     return 0;
 }
