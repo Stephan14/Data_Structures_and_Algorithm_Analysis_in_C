@@ -1,7 +1,10 @@
+/*空格替换*/
+
 #include<iostream>
+#include<string>
+#include<cstring>
 
 using namespace std;
-
 
 void repalceBlank( char strings[], int length )
 {   
@@ -46,7 +49,12 @@ void repalceBlank( char strings[], int length )
 
 int main()
 {
-    char str[10] = "a b";
+    char str[10];
+    string s;
+    //读取带有空格的一行字符串
+    getline( cin, s );
+    
+    strcpy( str, s.c_str() ); 
     repalceBlank( str, 10 ); 
     cout<< str <<endl;   
 	return 0;
