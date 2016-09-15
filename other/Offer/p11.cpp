@@ -28,12 +28,13 @@ double powerWithUnsignedExponent( double base, unsigned int exponent )
 
 double power( double base, int exponent )
 {
+    //判断基数是否为0
     if( equal( base, 0.0 ) && exponent < 0 )
     {
         errno = true;
         return 0.0;        
     }
-
+    //判断基数是否为负数
     if( exponent < 0 )
     {
         return 1.0 / powerWithUnsignedExponent( base, (unsigned int)( -exponent ) );
