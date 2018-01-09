@@ -1,4 +1,4 @@
-include<iostream>
+#include<iostream>
 
 using namespace std;
 
@@ -43,8 +43,6 @@ void deleteNode( Node **head, Node *deletedNode )
         deletedNode = NULL;
     }
 }
-
-
 
 int main ()
 {
