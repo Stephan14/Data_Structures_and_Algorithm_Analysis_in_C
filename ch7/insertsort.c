@@ -11,7 +11,7 @@ void InsertSort(std::vector<T> v)
   	{
 		int temp = v[index];
 		auto position = std::lower_bound(v.begin(), v.begin()+index, temp);
-		for(auto it = v.begin()+index ; it > position ; --j)
+		for(auto it = v.begin()+index; it > position; --j)
 			*it = *(it -1);
 		*position = temp;
 	}
@@ -35,7 +35,6 @@ int main(int argc, char const *argv[]) {
 	// 数据赋值计时结束并输出时间.
 	end_t = clock();
 	std::cout << (end_t - start_t) / (CLOCKS_PER_SEC * 60) << " minutes" << std::endl;
-
 
 	// 排序计时开始.
 	start_t = clock();
